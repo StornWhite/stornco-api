@@ -1,0 +1,2 @@
+# Required python packages for the production environment
+-r common.txt
