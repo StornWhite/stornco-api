@@ -8,4 +8,4 @@ def home(request):
     :param request: HttpRequest object
     :return: HttpResonse object
     """
-    return HttpResponse("Welcome to StornCo.  Get Some! Storn loves Karen!")
+    return HttpResponse("<h1>Welcome to StornCo.</h1>Get yourself some Storn!")
