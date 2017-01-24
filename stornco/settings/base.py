@@ -62,11 +62,16 @@ WSGI_APPLICATION = 'stornco.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+# DB connection info should be stored in environment variables
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': os.environ.get('DB_DEFAULT_ENGINE'),
+        'HOST': os.environ.get('DB_DEFAULT_HOST'),
+        'PORT': os.environ.get('DB_DEFAULT_PORT'),
+        'NAME': os.environ.get('DB_DEFAULT_NAME'),
+        'USER': os.environ.get('DB_DEFAULT_USER'),
+        'PASSWORD': os.environ.get('DB_DEFAULT_PASSWORD'),
     }
 }
 
