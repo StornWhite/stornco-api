@@ -10,3 +10,6 @@ class ContactStornco(models.Model):
     body = models.TextField()
     cc_sender = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "%s - %s" % (self.email, self.subject)
