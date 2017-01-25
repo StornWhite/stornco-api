@@ -1,9 +1,9 @@
 # Production environment settings
 from .base import *
 
-
+# Todo: Remove elasticbeanstalk host after configuring DNS
+# Todo: Explicitly list allowed hosts after configuring DNS
 ALLOWED_HOSTS = [
     '.us-west-1.elasticbeanstalk.com',
-    'api.storn.co',
-    'www.storn.co'
+    '.storn.co'
 ]
