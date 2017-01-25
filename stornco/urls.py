@@ -12,5 +12,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # storn.co contact application
-    url(r'^contact/', include('stornco.contact.urls')),
+    url(r'^contact/', include('contact.urls')),
 ]
