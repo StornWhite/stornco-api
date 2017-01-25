@@ -7,6 +7,3 @@ ALLOWED_HOSTS = [
     '.us-west-1.elasticbeanstalk.com',
     '.storn.co'
 ]
-
-# No DB on production as a test
-DATABASES = {}
