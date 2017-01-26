@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 
-
+'''
 class User(AbstractBaseUser):
     """
     User model is customized to require email addresses as identifier.
@@ -21,3 +21,4 @@ class User(AbstractBaseUser):
     # Required by AbstractBaseUser.
     def get_full_name(self):
         return '%s %s' % (self.first_name, self.last_name)
+'''

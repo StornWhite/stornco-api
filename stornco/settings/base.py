@@ -79,7 +79,7 @@ DATABASES = {
 
 
 # Custom User model
-AUTH_USER_MODEL = 'authorize.User'
+# AUTH_USER_MODEL = 'authorize.User'
 
 
 # Password validation
