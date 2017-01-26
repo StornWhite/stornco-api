@@ -1,7 +1,6 @@
 # Base settings that serve as a starting point for all environments
 
 import os
-import authorize
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,7 +79,7 @@ DATABASES = {
 
 
 # Custom User model
-AUTH_USER_MODEL = authorize.User
+AUTH_USER_MODEL = 'authorize.User'
 
 
 # Password validation
