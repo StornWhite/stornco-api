@@ -1,6 +1,7 @@
 import django.db.models as db_models
 import django.contrib.auth.models as auth_models
 
+
 class UserManager(auth_models.BaseUserManager):
     """
     Custom UserManager is needed to substitute email for username
@@ -29,7 +30,8 @@ class UserManager(auth_models.BaseUserManager):
         user = self.model(
             email=email,
             first_name=first_name.strip(),
-            last_name=last_name.strip()
+            last_name=last_name.strip(),
+            **extra_fields
         )
         user.set_password(password)
         user.save(using=self._db)
