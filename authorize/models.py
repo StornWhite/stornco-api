@@ -1,7 +1,6 @@
 import django.db.models as db_models
 import django.contrib.auth.models as auth_models
 
-# Todo: switch to django-custom-user as base
 class UserManager(auth_models.BaseUserManager):
     """
     Custom UserManager is needed to substitute email for username
