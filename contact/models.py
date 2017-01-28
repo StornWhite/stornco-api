@@ -11,5 +11,9 @@ class ContactStornco(models.Model):
     cc_sender = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name = 'Stornco Contact'
+        verbose_name_plural = 'Stornco Contacts'
+
     def __str__(self):
         return "%s - %s" % (self.email, self.subject)
