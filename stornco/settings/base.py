@@ -10,10 +10,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(bavcbqoz=vn&m*=^1x7bop!x#0ikc6_4%ajwkc^5tmwg*gw2$'
+SECRET_KEY = ''
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# SECURITY WARNING: enable debug mode in development environments only!
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -34,8 +34,11 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'authorize.apps.AuthorizeConfig',
 
-    # django-storages (amazone S3 storage engine)
+    # django-storages (amazon S3 storage engine)
     'storages',
+
+    # Django Rest Framework
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

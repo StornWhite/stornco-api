@@ -4,8 +4,8 @@ from .base import *
 
 # For security:
 
+SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
-
 ALLOWED_HOSTS = [
     '.storn.co'
 ]
