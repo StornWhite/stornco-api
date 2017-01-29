@@ -1,7 +1,12 @@
 # Requirements that are common to all installations
-django==1.10.5          # Django framework
-ipython==5.1.0          # Python terminal
-psycopg2==2.6.2         # PostgreSQL interface
-django-storages==1.5.2  # Storage engine for S3
-boto3==1.4.4            # Amazon API interface
-boto==2.45.0            # Amazon API interface
+django==1.10.5              # Django framework
+ipython==5.1.0              # Python terminal
+psycopg2==2.6.2             # PostgreSQL interface
+django-storages==1.5.2      # Storage engine for S3
+boto3==1.4.4                # Amazon API interface
+boto==2.45.0                # Amazon API interface
+djangorestframework==3.5.3  # API Engine
+Markdown==2.6.8             # Markdown engine (for DRF endpoint documentation)
+django-filter==1.0.1        # Object filtering for DRF
+django-crispy-forms==1.6.1  # HTML form engine (used by DRF)
+django-guardian==1.4.6      # Object-level permission framework (used by DRF)
