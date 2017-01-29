@@ -4,3 +4,4 @@ ipython==5.1.0          # Python terminal
 psycopg2==2.6.2         # PostgreSQL interface
 django-storages==1.5.2  # Storage engine for S3
 boto3==1.4.4            # Amazon API interface
+boto==2.45.0            # Amazon API interface
