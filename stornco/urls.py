@@ -13,4 +13,10 @@ urlpatterns = [
 
     # storn.co contact application
     url(r'^contact/', include('contact.urls')),
+
+    # login for django rest framework
+    url(
+        r'^api-auth/',
+        include('rest_framework.urls', namespace='rest_framework')
+    ),
 ]
