@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # project apps
+    'stornco.apps.StorncoConfig',
     'contact.apps.ContactConfig',
     'authorize.apps.AuthorizeConfig',
 
