@@ -6,6 +6,7 @@ django-storages==1.5.2      # Storage engine for S3
 boto3==1.4.4                # Amazon API interface
 boto==2.45.0                # Amazon API interface
 djangorestframework==3.5.3  # API Engine
+coreapi==2.1.1              # Web API representation (used by DRF)
 Markdown==2.6.8             # Markdown engine (for DRF endpoint documentation)
 django-filter==1.0.1        # Object filtering for DRF
 django-crispy-forms==1.6.1  # HTML form engine (used by DRF)
