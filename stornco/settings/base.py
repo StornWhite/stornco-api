@@ -135,9 +135,18 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-
         # IsAuthenticated rather than IsAdmin so visitors can view API docs.
         'rest_framework.permissions.IsAuthenticated',
     ],
+
+    'DEFAULT_THROTTLE_CLASSES': (
+        'stornco.libs.api.throttling.BurstRateThrottle',
+        'stornco.libs.api.throttling.SustainedRateThrottle'
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'burst': '60/min',
+        'sustained': '1000/day'
+    },
+
     'PAGE_SIZE': 100
 }

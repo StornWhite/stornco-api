@@ -16,6 +16,5 @@ class ContactStorncoSerializer(serializers.HyperlinkedModelSerializer):
             'subject',
             'body',
             'cc_sender',
-            'owner',
             'created_at'
         )

@@ -4,8 +4,9 @@ engineering with Python and Django.
 
 The backend stack includes:
 
- + Python 3.4
+ + Django Rest Framework 3.5.3
  + Django 1.10.5
+ + Python 3.4
  + PostgreSQL 9.6
 
 Deployed to AWS with Elastic Beanstalk.
