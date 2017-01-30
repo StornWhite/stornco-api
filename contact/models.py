@@ -1,5 +1,7 @@
 from django.db import models
 
+from authorize.models import User
+
 
 class ContactStornco(models.Model):
     """
@@ -9,6 +11,9 @@ class ContactStornco(models.Model):
     subject = models.CharField(max_length=120)
     body = models.TextField()
     cc_sender = models.BooleanField(default=True)
+    owner = models.ForeignKey(
+        User, null=True, blank=True, on_delete=models.SET_NULL
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
