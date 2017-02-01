@@ -19,7 +19,7 @@ class HelloView(APIView):
         count of the number of times that word has been echoed in the past.
 
         e.g. api.storn.co/hello/?hello=goodbye returns:
-        {"hello": "goodbye", "count": <count>}
+        {"hello": "goodbye", "count": count}
         """
         hello_txt = request.GET.get('hello')
 
