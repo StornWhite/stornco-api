@@ -6,12 +6,14 @@ from rest_framework_swagger.views import get_swagger_view
 
 from . import views
 from contact import urls as contact_urls
+from hello import urls as hello_urls
 
 
 # API routers for each application:
 v1_api_routers = [
 
-    url(r'^contact-stornco/', include(contact_urls) ),
+    url(r'^contact-stornco/', include(contact_urls)),
+    url(r'^hello/', include(hello_urls))
 
 ]
 

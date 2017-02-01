@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'stornco.apps.StorncoConfig',
     'contact.apps.ContactConfig',
     'authorize.apps.AuthorizeConfig',
+    'hello.apps.HelloConfig',
 
     # django-storages (amazon S3 storage engine)
     'storages',

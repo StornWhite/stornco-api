@@ -12,7 +12,7 @@ class ContactStorncoViewSet(ModelViewSet):
     """
     queryset = ContactStornco.objects.all().order_by('created_at')
     serializer_class = ContactStorncoSerializer
-    http_method_names = ['get', 'post', 'head']
+    http_method_names = ['get', 'post', 'head', ]
     permission_classes = [IsAuthenticated, ]
 
     def get_permissions(self):
