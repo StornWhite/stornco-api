@@ -12,3 +12,4 @@ django-filter==1.0.1        # Object filtering for DRF
 django-crispy-forms==1.6.1  # HTML form engine (used by DRF)
 django-guardian==1.4.6      # Object-level permission framework (used by DRF)
 django-rest-swagger==2.1.1  # API Auto-documentation
+django-cors-headers==2.0.1  # Cross Origin Resource Sharing

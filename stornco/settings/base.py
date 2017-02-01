@@ -154,3 +154,8 @@ REST_FRAMEWORK = {
 
     'PAGE_SIZE': 100
 }
+
+# CORS (Cross origin resource sharing)
+# Todo: Restrict this!
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
