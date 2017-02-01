@@ -11,3 +11,4 @@ Markdown==2.6.8             # Markdown engine (for DRF endpoint documentation)
 django-filter==1.0.1        # Object filtering for DRF
 django-crispy-forms==1.6.1  # HTML form engine (used by DRF)
 django-guardian==1.4.6      # Object-level permission framework (used by DRF)
+django-rest-swagger==2.1.1  # API Auto-documentation

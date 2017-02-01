@@ -39,6 +39,9 @@ INSTALLED_APPS = [
 
     # Django Rest Framework
     'rest_framework',
+
+    # Django Rest Swagger (auto-api documentation)
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
