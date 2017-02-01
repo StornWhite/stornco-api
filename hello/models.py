@@ -9,7 +9,7 @@ class Hello(models.Model):
     word = models.CharField(
         max_length=50, db_index=True, unique=True
     )
-    count = models.IntegerField()
+    count = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = 'Hello'
