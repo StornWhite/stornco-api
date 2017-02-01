@@ -24,15 +24,21 @@ class HelloView(APIView):
         hello_txt = request.GET.get('hello')
 
         if hello_txt:
-            # Look for past hello
+            # Look for past hello.
             try:
                 hello = Hello.objects.get(word=hello_txt)
             except Hello.DoesNotExist:
                 hello = Hello(word=hello_txt, count=0)
 
-        reply = {
-            'hello': hello.word,
-            'count': hello.count()
-        }
-
+            reply = {
+                'hello': hello.word,
+                'count': hello.count
+            }
+            hello.count += 1
+            hello.save()
+        else:
+            reply = {
+                'hello': "You didn't say Hello!",
+                'count': 0
+            }
         return Response(reply)
