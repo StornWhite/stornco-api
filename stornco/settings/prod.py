@@ -10,6 +10,15 @@ ALLOWED_HOSTS = [
     '.storn.co'
 ]
 
+# CORS - cross origin resource sharing
+# Todo: Further restrict when we are able to attach front end to dev enviros
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'null',
+    '127.0.0.1:8000',
+    'www.storn.co'
+)
+CORS_ALLOW_CREDENTIALS = True
 
 # Static file stuff:
 

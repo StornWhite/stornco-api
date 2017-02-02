@@ -17,6 +17,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
+# CORS - cross origin resource sharing - closed on base case.
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = ()
+CORS_ALLOW_CREDENTIALS = False
+
 
 # Application definition
 
@@ -156,7 +161,3 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100
 }
 
-# CORS (Cross origin resource sharing)
-# Todo: Restrict this!
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
