@@ -17,3 +17,20 @@ class Hello(models.Model):
 
     def __str__(self):
         return "%s: %i" % (self.word, self.count)
+
+    @classmethod
+    def get_or_create(cls, word):
+        """
+        If returns a matching Hello object if one can be found.  Otherwise,
+        creates and returns a new object.
+
+        :param word: string
+        :return: Hello object
+        """
+        try:
+            hello = cls.objects.get(word=word)
+        except Hello.DoesNotExist:
+            hello = cls(word=word, count=0)
+            hello.save()
+
+        return hello
