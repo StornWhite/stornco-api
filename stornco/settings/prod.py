@@ -16,7 +16,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'null',
     '127.0.0.1:8000',
-    'www.storn.co'
+    'www.storn.co',
+    'www.storn.co.s3-website-us-west-1.amazonaws.com/'
 )
 CORS_ALLOW_CREDENTIALS = True
 
