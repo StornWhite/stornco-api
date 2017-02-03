@@ -32,11 +32,9 @@ class HelloModelViewSet(ReadOnlyModelViewSet):
 
         if hello_txt:
             hello = Hello.get_or_create(hello_txt)
-            data = HelloSerializer(hello).data
-
             hello.count += 1
             hello.save()
-
-            return Response(data)
+            reply = HelloSerializer(hello).data
+            return Response(reply)
         else:
             raise ValidationError("You didn't say hello!")
