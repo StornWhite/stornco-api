@@ -12,8 +12,8 @@ from hello import urls as hello_urls
 # API routers for each application:
 v1_api_routers = [
 
-    url(r'^contact-stornco/', include(contact_urls)),
-    url(r'^hello/', include(hello_urls))
+    url(r'^', include(contact_urls)),
+    url(r'^', include(hello_urls))
 
 ]
 

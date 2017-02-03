@@ -31,5 +31,6 @@ class Hello(models.Model):
             hello = cls.objects.get(word=word)
         except Hello.DoesNotExist:
             hello = cls(word=word, count=0)
+            hello.save()
 
         return hello

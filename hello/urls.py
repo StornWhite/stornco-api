@@ -1,10 +1,7 @@
-from django.conf.urls import url
-from rest_framework.urlpatterns import format_suffix_patterns
-from .views import HelloView
+from rest_framework import routers
 
-urlpatterns = [
-    url(r'^$', HelloView.as_view()),
-    url(r'^(?P<pk>[0-9]+)/$', HelloView.as_view()),
-]
+from . import views
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+router = routers.DefaultRouter()
+router.register(r'hello', views.HelloModelViewSet)
+urlpatterns = router.urls
