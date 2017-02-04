@@ -191,14 +191,13 @@ class HelloAPITestCase(BaseAPITestCase):
         """
         Test echo with parameter too long.
         """
-        word = FuzzyText(length=50).fuzz
+        word = FuzzyText(length=50).fuzz()
         echo_url = self.base_url + 'echo/?hello=%s' % word
 
         response = self.client_anon.get(echo_url)
         self.assertEqual(response.status_code, 200)
 
-        word = FuzzyText(length=51).fuzz
-        print(word)
+        word = FuzzyText(length=51).fuzz()
         echo_url = self.base_url + 'echo/?hello=%s' % word
 
         response = self.client_anon.get(echo_url)

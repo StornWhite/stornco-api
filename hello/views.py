@@ -30,10 +30,15 @@ class HelloModelViewSet(ReadOnlyModelViewSet):
         hello_txt = request.GET.get('hello')
 
         if hello_txt:
-            hello = Hello.get_or_create(hello_txt)
-            hello.count += 1
-            hello.save()
-            reply = HelloSerializer(hello).data
-            return Response(reply)
+            # We must do our own validation.
+            serializer = HelloSerializer(data={'word': hello_txt})
+            if serializer.is_valid():
+                hello = Hello.get_or_create(hello_txt)
+                hello.count += 1
+                hello.save()
+                reply = HelloSerializer(hello).data
+                return Response(reply)
+            else:
+                raise ValidationError(serializer.errors)
         else:
-            raise ValidationError("You didn't say hello!")
+            raise ValidationError({'word': ["You didn't say hello!"]})
