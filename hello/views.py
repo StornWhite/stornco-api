@@ -16,7 +16,6 @@ class HelloModelViewSet(ReadOnlyModelViewSet):
     queryset = Hello.objects.all()
     serializer_class = HelloSerializer
     permission_classes = [IsAuthenticated, ]
-    http_method_names = ['get', ]
 
     @list_route(methods=['get'], permission_classes=[AllowAny])
     def echo(self, request, pk=None, format=None):

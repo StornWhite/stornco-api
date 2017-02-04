@@ -144,6 +144,7 @@ STATIC_URL = '/static/'
 # Django Rest Framework:
 
 REST_FRAMEWORK = {
+
     'DEFAULT_PERMISSION_CLASSES': [
         # IsAuthenticated rather than IsAdmin so visitors can view API docs.
         'rest_framework.permissions.IsAuthenticated',
@@ -158,6 +159,9 @@ REST_FRAMEWORK = {
         'sustained': '1000/day'
     },
 
-    'PAGE_SIZE': 100
+    'PAGE_SIZE': 100,
+
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+
 }
 
