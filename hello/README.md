@@ -7,13 +7,13 @@ echo your hello through an api endpoint.
  + Receive: An echo of the hello parameter value and a count of the
  number of times that the parameter has been echoed.
  
-  + Django Rest Framework > Django > Python > PostgreSQL on AWS
+ + Django Rest Framework > Django > Python > PostgreSQL on AWS
 
 Check out the public API at: http://api.stornco.com
 
 ## Some interesting code:
 
-> Check out custom *HelloSerializer*, which removes the unique validation
+> Check out the custom *HelloSerializer*, which removes the unique validation
 for Hello.word.  It's a handy approach for hacking the out-of-the
  box DRF validation.
  
