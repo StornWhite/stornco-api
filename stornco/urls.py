@@ -4,16 +4,17 @@ from django.contrib import admin
 
 from rest_framework_swagger.views import get_swagger_view
 
-from . import views
 from contact import urls as contact_urls
 from hello import urls as hello_urls
+from roof import urls as roof_urls
 
 
 # API routers for each application:
 v1_api_routers = [
 
     url(r'^', include(contact_urls)),
-    url(r'^', include(hello_urls))
+    url(r'^', include(hello_urls)),
+    url(r'^', include(roof_urls))
 
 ]
 

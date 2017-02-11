@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 from django.db import models
-from django.db.models import validators
+from django.core import validators
 
 
 class Roof(models.Model):
@@ -56,7 +56,7 @@ class Roof(models.Model):
         ]
     )
     aspect = models.DecimalField(
-        max_digits=3, decimal_places=1,
+        max_digits=4, decimal_places=1,
         validators=[
             validators.MinValueValidator(
                 limit_value=Decimal('0'),
