@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'authorize.apps.AuthorizeConfig',
     'hello.apps.HelloConfig',
+    'roof.apps.RoofConfig',
 
     # django-storages (amazon S3 storage engine)
     'storages',
