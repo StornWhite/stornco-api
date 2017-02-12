@@ -94,3 +94,19 @@ class Roof(models.Model):
             )
         ]
     )
+
+    @property
+    def area(self):
+        """
+        :return: Decimal roof's surface area in m^2
+        """
+        if self.shape == 'r':
+            # Rectangle
+            area = self.base * self.height
+        elif self.shape == 't':
+            # Triangle
+            area = self.base * self.height / 2
+        else:
+            raise ValueError('Undefined shape value.')
+
+        return area.quantize(Decimal('0.01'))

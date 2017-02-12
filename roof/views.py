@@ -1,5 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from .models import Roof
 from .serializers import RoofSerializer
@@ -11,4 +11,5 @@ class RoofModelViewSet(ModelViewSet):
     """
     queryset = Roof.objects.all()
     serializer_class = RoofSerializer
-    permission_classes = [IsAuthenticated, ]
+    # Todo: change to IsAuthenticated
+    permission_classes = [AllowAny, ]
