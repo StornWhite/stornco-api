@@ -84,17 +84,13 @@ class Task(TimeStampMixin, models.Model):
         """
         Closes the gaps in the priority ranking of a user's tasks.
         """
-        print('hi im in the fill thing')
         tasks = cls.objects.filter(user=user, is_complete=False)
         i = 0
-        print('hi I found {} tasks'.format(tasks.count()))
         for task in tasks:
             i += 1
             if task.priority != i:
-                print('hey task id={} has priority {} instead of {}'.format(task.id, task.priority, i))
                 task.priority = i
                 task.save()
-                print('hey i just saved a task')
 
     def delete(self, *args, **kwargs):
         """
