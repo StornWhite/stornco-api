@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'authorize.apps.AuthorizeConfig',
     'hello.apps.HelloConfig',
     'roof.apps.RoofConfig',
+    'tasklist.apps.TasklistConfig',
 
     # django-storages (amazon S3 storage engine)
     'storages',
@@ -49,6 +50,9 @@ INSTALLED_APPS = [
 
     # Django Rest Swagger (auto-api documentation)
     'rest_framework_swagger',
+
+    # Token Authentication for DRF
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
