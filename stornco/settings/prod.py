@@ -6,8 +6,9 @@ from .base import *
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
+# Todo: Reset allowed hosts to '.storn.co'
 ALLOWED_HOSTS = [
-    '.storn.co'
+    '.*.*'
 ]
 
 # CORS - cross origin resource sharing
