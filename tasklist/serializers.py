@@ -35,6 +35,8 @@ class TaskSerializer(ModelSerializer):
             raise exception
 
         user = self.context['request'].user
+        validated_data['user'] = user
+
         priority = validated_data.get('priority')
         next_priority = Task.get_next_priority(user)
 
@@ -43,6 +45,7 @@ class TaskSerializer(ModelSerializer):
         else:
             # Apply lowest priority.
             validated_data['priority'] = next_priority
+
         task = Task(**validated_data)
         task.save()
         return task
@@ -128,13 +131,14 @@ class TaskSerializer(ModelSerializer):
             'name',
             'description',
             'priority',
-            'user',
             'is_complete',
+            'user',
             'created_at',
             'updated_at'
         )
         read_only_fields = (
             'id',
+            'user',
             'created_at',
             'updated_at'
         )
